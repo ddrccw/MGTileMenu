@@ -546,6 +546,7 @@ CGGradientRef MGCreateGradientWithColors(UIColor *topColorRGB, UIColor *bottomCo
 	
 	// Dismiss if appropriate.
 	if (self.dismissAfterTileActivated) {
+		[self setAllTilesInteractionEnabled:NO];
 		[self performSelector:@selector(dismissMenu) withObject:nil afterDelay:MG_ACTIVATION_DISMISS_DELAY];
 	}
 }
